@@ -2,12 +2,6 @@ header {
     border: 1px solid red;
 }
 
-.center-content {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1600px;
-}
-
 .header-content {
     display: flex;
     align-items: center;

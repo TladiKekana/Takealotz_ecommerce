@@ -1,6 +1,17 @@
+import "./HeroSection.css"
+
 function HeroSection() {
     return (
-        <h1>I am hero section!</h1>
+        <section className="hero-section center-content">
+            <div className="categories"></div>
+            <div className="search-featured">
+                <div className="search">
+                    <input type="text" placeholder="Search for products" />
+                    <button>Search</button>
+                </div>
+                <div className="featured"></div>
+            </div>
+        </section>
     )
 }
 
