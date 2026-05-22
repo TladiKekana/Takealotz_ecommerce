@@ -1,0 +1,41 @@
+header {
+    border: 1px solid red;
+}
+
+.center-content {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.header-content h1, ul {
+    margin: 0;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+}
+
+.user-section nav {
+    margin-right: 20px;
+}
+
+.user-section ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header-deco {
+    height: 50px;
+    background-color: #0b79bf;
+
+}
