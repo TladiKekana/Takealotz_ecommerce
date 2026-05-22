@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <h1>I am the only header!</h1>
+        <h1>I am the only header 2!</h1>
     )
 }
 
