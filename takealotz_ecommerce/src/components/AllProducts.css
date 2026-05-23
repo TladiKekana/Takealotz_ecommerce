@@ -5,4 +5,6 @@
 .all-products {
     border: 1px solid brown;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
