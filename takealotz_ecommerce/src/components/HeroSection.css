@@ -3,14 +3,7 @@
     border: 1px solid green;
     display: flex;
     justify-content: space-between;
-    margin-top: -30px;
-}
-
-.categories {
-    width: 200px;
-    height: 100%;
-    border: 1px solid darkorange;
-    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 .search-featured {

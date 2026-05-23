@@ -10,6 +10,7 @@ function AllProducts(props) {
                 title={product.title}
                 description={product.description}
                 price={product.price}
+                category={product.category}
             />
         )
     })

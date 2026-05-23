@@ -3,10 +3,15 @@ import "./ProductCard.css"
 function ProductCard(props) {
     return (
         <div className="product-card">
-            <img src={props.image} alt={props.title} />
-            <p>title</p>
-            <p>product description</p>
-            <p>price</p>
+            <div className="image-container">
+                <img src={props.image} alt={props.title} />
+            </div>
+            <div className="product-details">
+                <span><strong>{props.title}</strong></span>
+                <p>{props.description}</p>
+                <p>{props.price}</p>
+                <p>{props.category}</p>
+            </div>
         </div>
     )
 }

@@ -1,9 +1,10 @@
+import Categories from "./Categories"
 import "./HeroSection.css"
 
 function HeroSection() {
     return (
         <section className="hero-section center-content">
-            <div className="categories"></div>
+            <Categories />
             <div className="search-featured">
                 <div className="search">
                     <input type="text" placeholder="Search for products" />

@@ -1,0 +1,34 @@
+aside {
+    display: flex;
+}
+
+.categories-container {
+    width: 200px;
+    height: 100%;
+    border: 1px solid darkorange;
+    /* margin-right: 20px; */
+}
+
+.categories-container h2 {
+    margin: 0 0 10px;
+
+}
+
+.categories-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.categories-container li {
+    border: 1px solid red;
+    padding: .5em 0;
+}
+
+.category-list-container {
+    width: 200px;
+    border: 1px solid lawngreen;
+    margin-right: -180px;
+    background-color: brown;
+    z-index: 1;
+}
