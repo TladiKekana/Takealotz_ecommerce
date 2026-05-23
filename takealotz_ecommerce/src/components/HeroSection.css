@@ -18,12 +18,13 @@
 }
 
 .search {
+    display: flex;
     border: 1px solid purple;
     margin-bottom: 20px;
 }
 
 .search input {
-    width: 90%;
+    flex-grow: 1;
 }
 
 .featured {
