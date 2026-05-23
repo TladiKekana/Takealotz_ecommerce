@@ -1,3 +1,8 @@
+main {
+    border: 1px solid magenta;
+    flex: 1;
+}
+
 .center-content {
     width: 90%;
     margin: 0 auto;

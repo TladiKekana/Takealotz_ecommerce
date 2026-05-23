@@ -8,8 +8,10 @@ function App() {
   return (
     <>
       <Header />
-      <HeroSection />
-      <AllProducts />
+      <main>
+        <HeroSection />
+        <AllProducts />
+      </main>
       <Footer />
     </>
   )

@@ -1,6 +1,10 @@
+import "./Footer.css"
+
 function Footer() {
     return (
-        <h1>I am footer!</h1>
+        <footer>
+            <p>copyright: takealotz online (Pty) Ltd</p>
+        </footer>
     )
 }
 
