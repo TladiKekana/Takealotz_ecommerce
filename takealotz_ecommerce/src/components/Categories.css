@@ -4,7 +4,7 @@ aside {
 
 .categories-container {
     width: 200px;
-    height: 100%;
+    align-self: flex-start;
     border: 1px solid darkorange;
     /* margin-right: 20px; */
 }

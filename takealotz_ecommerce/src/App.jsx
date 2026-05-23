@@ -10,6 +10,23 @@ import './App.css'
 function App() {
   const [products, setProducts] = useState([])
   const [category, setCategory] = useState("all")
+  const [selectedCategory, setSelectedCategory] = useState("")
+
+  const handleMouseOverCategory = (event) => {
+    setSelectedCategory(event.target.id)
+  }
+
+  const handleMouseLeaveCategory = (event) => {
+    if(event.relatedTarget.id !== "category-list-container-id") {
+      setSelectedCategory("")
+    }
+  }
+
+  const handleMouseLeaveSelCategory = (event) => {
+    if(event.relatedTarget.id !== "categories-container-id") {
+      setSelectedCategory("")
+    }
+  }
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -23,7 +40,12 @@ function App() {
     <>
       <Header />
       <main>
-        <HeroSection />
+        <HeroSection
+          selectedCategory={selectedCategory}
+          handleMouseOverCategory={handleMouseOverCategory} 
+          handleMouseLeaveCategory={handleMouseLeaveCategory}
+          handleMouseLeaveSelCategory={handleMouseLeaveSelCategory} 
+        />
         <AllProducts products={products}/>
       </main>
       <Footer />
