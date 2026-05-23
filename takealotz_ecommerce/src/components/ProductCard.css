@@ -1,3 +1,8 @@
 .product-card {
     border: 1px solid skyblue;
+    width: 300px;
+}
+
+.product-card img {
+    width: 100%;
 }
