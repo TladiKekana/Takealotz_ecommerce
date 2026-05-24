@@ -4,7 +4,7 @@ function HeroSection(props) {
 
     const selectedCategoryProducts = props.products.filter(product => product.category === props.selectedCategory)
     const categotyProductList = selectedCategoryProducts.map(product => (
-        <li key={product.id}>{product.title}</li>
+        <li key={product.id} onClick={props.selectedProduct}>{product.title}</li>
     ))
 
     return (
@@ -15,36 +15,31 @@ function HeroSection(props) {
                 <div 
                     className="categories-container" 
                     id="categories-container-id"
-                    // onMouseEnter={props.handleMouseEnterCategory}
                     onMouseLeave={props.handleMouseLeaveCategory}
                 >
                     {/* <h2>Categories</h2> */}
                     <div className="categories">
                         <ul>
                             <li 
-                                onMouseEnter={props.handleMouseEnterCategory}
-                                // onMouseLeave={props.handleMouseLeaveCategory} 
+                                onMouseEnter={props.handleMouseEnterCategory} 
                                 id="men's clothing"
                             >
                                 Men's clothing
                             </li>
                             <li 
-                                onMouseEnter={props.handleMouseEnterCategory}
-                                // onMouseLeave={props.handleMouseLeaveCategory} 
+                                onMouseEnter={props.handleMouseEnterCategory} 
                                 id="women's clothing"
                             >
                                 Women's clothing
                             </li>
                             <li 
-                                onMouseEnter={props.handleMouseEnterCategory}
-                                // onMouseLeave={props.handleMouseLeaveCategory} 
+                                onMouseEnter={props.handleMouseEnterCategory} 
                                 id="jewelery"
                             >
                                 Jewelery
                             </li>
                             <li 
-                                onMouseEnter={props.handleMouseEnterCategory}
-                                // onMouseLeave={props.handleMouseLeaveCategory} 
+                                onMouseEnter={props.handleMouseEnterCategory} 
                                 id="electronics"
                             >
                                 Electronics
@@ -55,7 +50,6 @@ function HeroSection(props) {
                     <div
                         id="category-list-container-id" 
                         className="category-list-container" 
-                        // onMouseLeave={props.handleMouseLeaveSelCategory}
                     >
                         <ul>
                             {categotyProductList}
