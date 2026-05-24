@@ -24,6 +24,10 @@ function Home() {
 
   const navigate = useNavigate()
 
+  const getSelectedProduct = (id) => {
+    return products.find(product => product.id === Number(id))
+  }
+
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
     .then(res => res.json())
@@ -38,7 +42,9 @@ function Home() {
       <main>
         <HeroSection
           products={products}
-          selectedProduct={() => navigate("/product")}
+          selectProduct={(event) => navigate("/product", {
+            state: {product: getSelectedProduct(event.target.id)}
+          })}
           selectedCategory={selectedCategory}
           handleMouseEnterCategory={handleMouseEnterCategory} 
           handleMouseLeaveCategory={handleMouseLeaveCategory}

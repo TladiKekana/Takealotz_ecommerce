@@ -4,7 +4,13 @@ function HeroSection(props) {
 
     const selectedCategoryProducts = props.products.filter(product => product.category === props.selectedCategory)
     const categotyProductList = selectedCategoryProducts.map(product => (
-        <li key={product.id} onClick={props.selectedProduct}>{product.title}</li>
+        <li 
+            key={product.id} 
+            id={product.id} 
+            onClick={props.selectProduct}
+        >
+            {product.title}
+        </li>
     ))
 
     return (
