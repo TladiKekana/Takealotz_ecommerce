@@ -1,20 +1,24 @@
+import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import "./Header.css"
 
 function Header() {
+    const navigate = useNavigate()
+
     return (
         <header>
             <div className="header-content center-content">
-                <h1>takealotz</h1>
+                <h1><Link to="/">takealotz</Link></h1>
                 <div className="user-section">
                     <nav>
                         <ul>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Register</a></li>
-                            <li><a href="#">My Account</a></li>
+                            <li><Link to="/login">Login</Link></li>
+                            <li><Link to="/register">Register</Link></li>
+                            <li><Link to="/my-accout">My Account</Link></li>
                         </ul>
                     </nav>
-                    <button>Wishlist</button>
-                    <button>Cart</button>
+                    <button onClick={() => navigate("/wishlist")}>Wishlist</button>
+                    <button onClick={() => navigate("/cart")}>Cart</button>
                 </div>
             </div>
             <div className="header-deco"></div>
