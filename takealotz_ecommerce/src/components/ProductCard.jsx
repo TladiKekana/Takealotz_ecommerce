@@ -4,7 +4,12 @@ function ProductCard(props) {
     return (
         <div className="product-card">
             <div className="image-container">
-                <img src={props.image} alt={props.title} />
+                <img
+                    id={props.id} 
+                    src={props.image} 
+                    alt={props.title} 
+                    onClick={props.selectProduct}
+                />
             </div>
             <div className="product-details">
                 <span><strong>{props.title}</strong></span>

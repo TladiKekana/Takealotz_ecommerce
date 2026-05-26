@@ -2,18 +2,20 @@ import ProductCard from "./ProductCard"
 import "./AllProducts.css"
 
 function AllProducts(props) {
-    const productCards = props.products.map(product => {
-        return (
+    const productCards = props.products.map(product => (
+        <div key={product.id} className="product-container">
             <ProductCard 
-                key={product.id}
+                id={product.id}
                 image={product.image}
                 title={product.title}
                 description={product.description}
                 price={product.price}
                 category={product.category}
+                selectProduct={props.selectProduct}
             />
-        )
-    })
+            <button>Add to Cart</button>
+        </div>
+    ))
 
     return (
         <section className="products-section center-content">

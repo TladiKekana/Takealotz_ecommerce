@@ -8,3 +8,16 @@
     flex-wrap: wrap;
     gap: 20px;
 }
+
+.product-container {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    width: 300px;
+}
+
+.product-container button {
+    width: 100%;
+}

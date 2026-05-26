@@ -4,7 +4,6 @@ import AllProducts from "../components/AllProducts"
 import Footer from "../components/Footer"
 
 import { useNavigate } from "react-router-dom"
-
 import { useEffect, useState } from "react"
 
 // import './App.css'
@@ -25,7 +24,8 @@ function Home() {
   const navigate = useNavigate()
 
   const getSelectedProduct = (id) => {
-    return products.find(product => product.id === Number(id))
+    const product = products.find(product => product.id === Number(id))
+    return product
   }
 
   useEffect(() => {
@@ -50,7 +50,12 @@ function Home() {
           handleMouseLeaveCategory={handleMouseLeaveCategory}
           // handleMouseLeaveSelCategory={handleMouseLeaveSelCategory} 
         />
-        <AllProducts products={products}/>
+        <AllProducts 
+          products={products}
+          selectProduct={(event) => navigate("/product", {
+            state: {product: getSelectedProduct(event.target.id)}
+          })}
+        />
       </main>
       <Footer />
     </>
